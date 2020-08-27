@@ -1,5 +1,8 @@
 <template>
+    <div class="header">
     <h1>{{ msg }}</h1>
+
+    </div>
 </template>
 
 <script>
@@ -10,3 +13,12 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+.header {
+    background-color: rgb(133, 197, 199);
+    color: white;
+    margin: 0%;
+    padding: 5%;
+}
+</style>
