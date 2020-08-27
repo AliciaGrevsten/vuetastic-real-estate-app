@@ -9,7 +9,7 @@
 
 <template>
   <div>
-    <div v-bind:key="agent.id" v-for="agent in agents"></div>
+    <div v-bind:key="agent.id" v-for="agent in data"></div>
     <h3>{{agent.first_name}} {{agent.last_name}}</h3>
     <h4>{{agent.telephone}}</h4>
     <h4>{{agent.email}}</h4>
@@ -23,7 +23,7 @@
 <script>
 export default {
   name: "",
-  props: ["agents"],
+  props: ["data"],
 };
 </script>
 
