@@ -3,11 +3,11 @@
     <Header msg="Vuetastic Real Estate"></Header>
 
     <div class="col profile">
-      <AgentProfile></AgentProfile>
+      <AgentProfile v-bind:data="data"></AgentProfile>
     </div>
-    <div class="col listings">
+     <div class="col listings">
       <Listings v-bind:data="data"></Listings>
-    </div>
+    </div> 
     <div class="col listing">
       <Listing></Listing>
     </div>
