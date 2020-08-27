@@ -6,7 +6,7 @@
       <AgentProfile></AgentProfile>
     </div>
     <div class="col listings">
-      <Listings></Listings>
+      <Listings v-bind:data="data"></Listings>
     </div>
     <div class="col listing">
       <Listing></Listing>
@@ -19,6 +19,7 @@ import Header from './components/Header.vue'
 import AgentProfile from './components/AgentProfile.vue'
 import Listing from './components/Listing.vue'
 import Listings from './components/Listings.vue'
+import json from './assets/house_data.json'
 
 
 export default {
@@ -28,6 +29,11 @@ export default {
     AgentProfile,
     Listing,
     Listings
+  },
+  data() {
+    return {
+      data: json,
+    }
   }
 }
 </script>
@@ -39,6 +45,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
