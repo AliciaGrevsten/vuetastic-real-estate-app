@@ -16,7 +16,14 @@
 
      <img src="`${{agent.profile_image}}`" alt="Profile image" /> 
    
-    <!-- <ul>{{agent.listings}}</ul> -->
+    <ul v-bind:key="listing.adress" v-for="listing in agent.listings">
+      <li>{{listing.address}}</li>
+       <li>{{listing.description}}</li>
+        <li>{{listing.latitude}}</li>
+         <li>{{listing.longitude}}</li>
+          <img src="`${{listing.images}}`">
+      
+      </ul> 
 
 </div>
   </div>
