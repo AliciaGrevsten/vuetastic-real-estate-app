@@ -1,6 +1,5 @@
 <template>
   <div class="container">
-    <h1>Listings</h1>
     <div class="cardgroup" v-bind:key="agent.id" v-for="agent in displayedListings">
       <div class="card" v-bind:key="listing.address" v-for="listing in agent.listings">
         <div class="card-body left">
@@ -75,10 +74,9 @@ export default {
   width: 100%;
   color: white;
   min-height: 250px;
-  align-items: stretch;
   box-sizing: border-box;
   padding: 1% 2%;
-  margin: 1% 0% 3% 0%;
+  margin: 0% 0% 3% 0%;
   border-bottom: 1px dotted rgba(77, 99, 119, 0.384);
   border-radius: 4px;
 }
@@ -87,17 +85,15 @@ export default {
 }
 .left,
 .right {
-  padding: 4%;
+  padding: 2%;
   float: left;
+  box-sizing: border-box;
 }
 .left {
-  width: 40%;
+  width: 60%;
 }
 .right {
   width: 40%;
-}
-h1 {
-  text-shadow: 1px 1px rgb(140, 147, 155);
 }
 h5,
 h4,
@@ -106,15 +102,14 @@ h3 {
 }
 img {
   height: 100%;
-  width: 90%;
+  width: 100%;
   display: block;
-  border-radius: 6px;
 }
 a {
   text-decoration: none;
   color: rgb(37, 85, 131);
 }
 a:hover {
-  color: rgb(26, 139, 115);
+  color: rgb(4, 158, 86);
 }
 </style>
