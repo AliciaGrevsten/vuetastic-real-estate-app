@@ -51,8 +51,9 @@ export default {
   margin-bottom: 2%;
   border-radius: 12px;
 }
+
 img{
-      height: 50%;
+  height: 50%;
   width: 100%;
   display: block;
   
