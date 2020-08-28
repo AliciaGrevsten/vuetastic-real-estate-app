@@ -6,17 +6,18 @@
 -->
 <template>
   <div class="container">
-    <h1>Listings</h1>
+    <h1 class="title">Listings</h1>
     <div class="cardgroup" v-bind:key="agent.id" v-for="agent in data">
-      <div class="card" v-bind:key="listing.adress" v-for="listing in agent.listings">
-        <h3 class="card-header">Adress: {{ listing.adress }}</h3>
+      <div class="card" v-bind:key="listing.address" v-for="listing in agent.listings">
+        <h3 class="card-header">{{ listing.address }}</h3>
         <div class="card-body">
           <h5 class="card-title">
-            <a href="#" class="card-link">Agent: {{ agent.first_name }} {{ agent.last_name }}</a>
+            Agent: <a href="#" class="card-link"> {{ agent.first_name }} {{ agent.last_name }}</a>
           </h5>
         </div>
+        <br>
         <img
-          src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22318%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_158bd1d28ef%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_158bd1d28ef%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22129.359375%22%20y%3D%2297.35%22%3EImage%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+        v-bind:src="listing.images[0]"
           alt="Picture of listing"
         />
         <br />
@@ -37,19 +38,29 @@ export default {
 
 <style scoped>
 .container {
-  color: rgb(133, 197, 199);
+    width: 60%;
+    margin: auto;
+    color: rgb(77, 99, 119);
 }
 .card {
-  width: 20%;
+  width: 25%;
   color: white;
+  min-height: 400px;
+  align-items: stretch;
   background-color: rgb(133, 197, 199);
-  padding: 1%;
-  margin: 1%;
+  padding: 1% 2%;
+  margin: 2%;
   float: left;
   border-radius: 12px;
 }
+.title {
+    padding: 1% 1% 4% 1%;
+}
+h3 {
+    color: rgb(58, 82, 104);
+}
 img {
-  height: 200px;
+  height: 50%;
   width: 100%;
   display: block;
 }

@@ -2,22 +2,22 @@
   <div id="app">
     <Header msg="Vuetastic Real Estate"></Header>
 
-    <div class="col profile">
+    <!-- <div class="col profile">
       <AgentProfile></AgentProfile>
-    </div>
+    </div> -->
     <div class="col listings">
       <Listings v-bind:data="data"></Listings>
     </div>
-    <div class="col listing">
+    <!-- <div class="col listing">
       <Listing></Listing>
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script>
 import Header from './components/Header.vue'
-import AgentProfile from './components/AgentProfile.vue'
-import Listing from './components/Listing.vue'
+//import AgentProfile from './components/AgentProfile.vue'
+//import Listing from './components/Listing.vue'
 import Listings from './components/Listings.vue'
 import json from './assets/house_data.json'
 
@@ -26,15 +26,15 @@ export default {
   name: 'App',
   components: {
     Header, 
-    AgentProfile,
-    Listing,
+    //AgentProfile,
+    //Listing,
     Listings
   },
   data() {
     return {
       data: json,
     }
-  }
+  },
 }
 </script>
 
