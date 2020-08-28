@@ -1,5 +1,4 @@
 <template>
-  <div class="container">
     <h1>More Information</h1>
     <div class="cardgroup" v-if="isSelected">
         <div class="card">
@@ -23,7 +22,6 @@
     <div v-if="!isSelected">
       <h5>Click on "Read more.." on any of the listings to see more details.</h5>
     </div>
-  </div>
 </template>
 
 <script>
@@ -41,9 +39,10 @@ export default {
   box-sizing: border-box;
   margin: 1%;
 }
-img {
-  display: block;
+img{
+  height: 50%;
   width: 100%;
+  display: block;
 }
 h1 {
     text-shadow: 1px 1px rgb(140, 147, 155);
