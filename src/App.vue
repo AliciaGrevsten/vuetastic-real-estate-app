@@ -8,9 +8,9 @@
      <div class="col listings">
       <Listings v-bind:data="data"></Listings>
     </div> 
-    <div class="col listing">
-      <Listing></Listing>
-    </div> -->
+     <div class="col listing">
+       <Listing v-bind:data="data"></Listing>
+    </div>
   </div>
 </template>
 
