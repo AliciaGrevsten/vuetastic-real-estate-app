@@ -5,7 +5,6 @@
 -->
 <template>
   <div class="container">
-    <h1>Listing</h1>
     <div class="cardgroup" v-bind:key="listing.id" v-for="listing in data">
       <div v-bind:key="agent.id" v-for="agent in data">
         <div class="card" v-bind:key="listing.id" v-for="listing in listing.listings">
@@ -38,19 +37,25 @@ export default {
 
 <style scoped>
 .container {
-  color: rgb(133, 197, 199);
+  width: 60%;
+    margin: auto;
+    color: rgb(77, 99, 119);
 }
 .card {
-  width: 20%;
+    width: 25%;
   color: white;
+  min-height: 400px;
   background-color: rgb(133, 197, 199);
-  padding: 1%;
-  margin: 1%;
-  float: left;
+  padding: 2%;
+  margin-left: 90%;
+  margin-bottom: 2%;
   border-radius: 12px;
 }
-.img {
-  display: block;
+img{
+      height: 50%;
   width: 100%;
+  display: block;
+  
 }
+
 </style>
