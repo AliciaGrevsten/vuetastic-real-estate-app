@@ -5,27 +5,27 @@
 -->
 <template>
   <div class="container">
-    <div class="cardgroup" v-bind:key="listing.id" v-for="listing in data">
-      <div v-bind:key="agent.id" v-for="agent in data">
-        <div class="card" v-bind:key="listing.id" v-for="listing in listing.listings">
-          <div class="card-body">
+     <div class="container">
+    <div  v-bind:key="listing.id" v-for="listing in data">
+         <div v-bind:key="agent.id" v-for="agent in data">
+              
+      <div class="card" v-bind:key="listing.id" v-for="listing in listing.listings">     
             <div class="img" v-bind:key="image.id" v-for="image in listing.images">
-              <img v-bind:src="image" />
-            </div>
+           <img v-bind:src="image" /> </div>
             <p>Adress: {{ listing.address }}</p>
             <p>Description: {{ listing.description }}</p>
             <p>Latitude: {{ listing.latitude }}</p>
             <p>Longitude: {{ listing.longitude }}</p>
-
-            <br />
+            
+          
+            <br>
             <p>Agent: {{agent.first_name}} {{agent.last_name}}</p>
             <p>Telephone: {{agent.telephone}}</p>
             <p>Email: {{agent.email}}</p>
-          </div>
         </div>
       </div>
+      </div>
     </div>
-  </div>
 </template>
 
 <script>
