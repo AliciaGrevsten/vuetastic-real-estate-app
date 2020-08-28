@@ -1,62 +1,45 @@
-<!-- 
-* Adress
-* Real Estate Agent contact information
-* Images (full gallery)
--->
 <template>
-  <div class="container">
-     <div class="container">
-    <div  v-bind:key="listing.id" v-for="listing in data">
-         <div v-bind:key="agent.id" v-for="agent in data">
-    
-      <div class="card" v-bind:key="listing.address" v-for="listing in agent.listings">  
+    <h1>More Information</h1>
+    <div class="cardgroup" v-if="isSelected">
+        <div class="card">
+          <div class="card-body">
+            <h4>Address: {{ listing.address }}</h4>
+            <h4>Description: {{ listing.description }}</h4>
+            <h4>Latitude: {{ listing.latitude }}</h4>
+            <h4>Longitude: {{ listing.longitude }}</h4>
+
+            <br />
+            <h4>Agent: {{agent.first_name}} {{agent.last_name}}</h4>
+            <h4>Phone: {{agent.telephone}}</h4>
+            <h4>Email: {{agent.email}}</h4>
+
             <div class="img" v-bind:key="image.id" v-for="image in listing.images">
-           <img v-bind:src="image" /> </div>
-            <p>Adress: {{ listing.address }}</p>
-            <p>Description: {{ listing.description }}</p>
-            <p>Latitude: {{ listing.latitude }}</p>
-            <p>Longitude: {{ listing.longitude }}</p>
-            
-          
-            <br>
-            <p>Agent: {{agent.first_name}} {{agent.last_name}}</p>
-            <p>Telephone: {{agent.telephone}}</p>
-            <p>Email: {{agent.email}}</p>
+              <img v-bind:src="image" />
+            </div> 
+          </div>
         </div>
-      </div>
-      </div>
     </div>
 </template>
 
 <script>
 export default {
   name: "Listing",
-  props: ["data"],
+  props: ["listing", "agent", "isSelected"],
 };
 </script>
 
 <style scoped>
-.container {
-  width: 60%;
-    margin: auto;
-    color: rgb(77, 99, 119);
-}
 .card {
-    width: 25%;
-  color: white;
-  min-height: 400px;
-  background-color: rgb(133, 197, 199);
-  padding: 2%;
-  margin-left: 90%;
-  margin-bottom: 2%;
-  border-radius: 12px;
+  width: 100%;
+  color: rgb(77, 99, 119);
+  padding: 2% 4%;
+  box-sizing: border-box;
+  margin: 1%;
 }
-
 img{
   height: 50%;
   width: 100%;
   display: block;
-  
 }
 
 </style>
