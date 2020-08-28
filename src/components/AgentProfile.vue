@@ -1,28 +1,22 @@
-<!--
-* Agent information
-    * Name
-    * Phonenumber
-    * Email
-    * Profile Image
-    * List of listings
--->
 
 <template>
-  <div class="container" v-if="isClicked">
-    <div class="cardgroup" v-bind:key="agent.id" v-for="agent in data">
+  <div class="container">
+    <div class="cardgroup">
       <div class="card">
         <h3>{{agent.first_name}} {{agent.last_name}}</h3>
-        <h4>{{agent.telephone}}</h4>
-        <h4>{{agent.email}}</h4>
 
         <img v-bind:src="agent.profile_image" alt="Profile image" />
+        
+        <h4>Phone: {{agent.telephone}}</h4>
+        <h4>Email: {{agent.email}}</h4>
 
+        <p>Listings: </p>
         <ul v-bind:key="listing.adress" v-for="listing in agent.listings">
           <li>{{listing.address}}</li>
-          <li>{{listing.description}}</li>
+          <!-- <li>{{listing.description}}</li>
           <li>{{listing.latitude}}</li>
-          <li>{{listing.longitude}}</li>
-          <!-- <img v-bind:src="listing.images">  -->
+          <li>{{listing.longitude}}</li> -->
+          <!-- <img v-bind:src="listing.images">  Tycker inte vi behöver detta-->
         </ul>
       </div>
     </div>
@@ -32,14 +26,8 @@
 
 <script>
 export default {
-  name: "Agent",
- props: {
-   data: Array,
-    isClicked:{
-      type: Boolean
-    }
-    },
-
+  name: "AgentProfile",
+ props: ["agent"]
 };
 </script>
 
@@ -56,16 +44,17 @@ export default {
   float: left;
   border-radius: 12px;
 }
+h3 {
+  font-family: 'Quicksand', sans-serif; 
+}
+h4, p {
+  text-align: left;
+}
 img {
   height: 200px;
-  width: 100%;
+  width: 80%;
   display: block;
-}
-a {
-  text-decoration: none;
-  color: white;
-}
-a:hover {
-  color: rgb(58, 82, 104);
+  border-radius: 200px;
+  margin: auto;
 }
 </style>

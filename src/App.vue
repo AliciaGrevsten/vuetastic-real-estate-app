@@ -1,15 +1,18 @@
 <template>
   <div id="app">
-    <Header msg="Vuetastic Real Estate"></Header>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
 
-    <div class="col profile">
-      <AgentProfile v-bind:data="data" v-bind:isClicked="isSelected"></AgentProfile>
+    <Header></Header>
+
+    <div class="col profile" v-if="isSelected" >
+      <AgentProfile v-bind:agent="agent"></AgentProfile>
     </div>
      <div class="col listings">
-      <Listings v-bind:data="data" v-bind:isSelected="isSelected" v-on:show-agent="showAgent"></Listings>
+      <Listings v-bind:data="data" v-on:show-agent="showAgent"></Listings>
     </div> 
-    <div class="col listing">
-      <Listing></Listing>
+     <!-- <div class="col listing">
+       <Listing v-bind:data="data"></Listing>
     </div> -->
   </div>
 </template>
@@ -26,7 +29,7 @@ export default {
   name: 'App',
   components: {
     Header, 
-   AgentProfile,
+    AgentProfile,
     //Listing,
     Listings
   },
@@ -34,11 +37,17 @@ export default {
     return {
       data: json,
       isSelected: false,
+      agent: {}
     }
-  },
-  methods:{
-    showAgent(){
-      this.isSelected = !this.isSelected;
+  }, 
+  methods: {
+    showAgent(agentId){
+      this.data.forEach(agent => {
+        if (agent.id == agentId) {
+          this.agent = agent;
+           this.isSelected = true; 
+        }
+      });
     }
   }
 }
@@ -46,10 +55,15 @@ export default {
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Quicksand', sans-serif;  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: rgb(58, 82, 104);
+}
+
+h1, h3 {
+  font-family: 'Sacramento', cursive;
+    color: rgb(58, 82, 104);
 }
 </style>
