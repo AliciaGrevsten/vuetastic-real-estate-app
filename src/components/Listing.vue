@@ -8,8 +8,8 @@
      <div class="container">
     <div  v-bind:key="listing.id" v-for="listing in data">
          <div v-bind:key="agent.id" v-for="agent in data">
-              
-      <div class="card" v-bind:key="listing.id" v-for="listing in listing.listings">     
+    
+      <div class="card" v-bind:key="listing.address" v-for="listing in agent.listings">  
             <div class="img" v-bind:key="image.id" v-for="image in listing.images">
            <img v-bind:src="image" /> </div>
             <p>Adress: {{ listing.address }}</p>
