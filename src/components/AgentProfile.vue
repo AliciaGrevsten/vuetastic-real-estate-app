@@ -8,21 +8,23 @@
 -->
 
 <template>
-  <div class="container">
+  <div class="container" v-show="isSelected">
     <div class="cardgroup" v-bind:key="agent.id" v-for="agent in data">
-      <h3>{{agent.first_name}} {{agent.last_name}}</h3>
-      <h4>{{agent.telephone}}</h4>
-      <h4>{{agent.email}}</h4>
+      <div class="card">
+        <h3>{{agent.first_name}} {{agent.last_name}}</h3>
+        <h4>{{agent.telephone}}</h4>
+        <h4>{{agent.email}}</h4>
 
-      <!-- <img src="`${{agent.profile_image}}`" alt="Profile image" />  -->
+        <img v-bind:src="agent.profile_image" alt="Profile image" />
 
-      <ul v-bind:key="listing.adress" v-for="listing in agent.listings">
-        <li>{{listing.address}}</li>
-        <li>{{listing.description}}</li>
-        <li>{{listing.latitude}}</li>
-        <li>{{listing.longitude}}</li>
-        <!-- <img src="`${{listing.images}}`"> -->
-      </ul>
+        <ul v-bind:key="listing.adress" v-for="listing in agent.listings">
+          <li>{{listing.address}}</li>
+          <li>{{listing.description}}</li>
+          <li>{{listing.latitude}}</li>
+          <li>{{listing.longitude}}</li>
+          <!-- <img v-bind:src="listing.images">  -->
+        </ul>
+      </div>
     </div>
   </div>
 </template>
@@ -32,6 +34,7 @@
 export default {
   name: "Agent",
   props: ["data"],
+  isSelected: false,
 };
 </script>
 

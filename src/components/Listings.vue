@@ -9,10 +9,10 @@
     <h1>Listings</h1>
     <div class="cardgroup" v-bind:key="agent.id" v-for="agent in data">
       <div class="card" v-bind:key="listing.adress" v-for="listing in agent.listings">
-        <h3 class="card-header">Adress: {{ listing.adress }}</h3>
+        <h3 class="card-header">Adress: {{ listing.address }}</h3>
         <div class="card-body">
           <h5 class="card-title">
-            <a href="#" class="card-link">Agent: {{ agent.first_name }} {{ agent.last_name }}</a>
+            <a href="#" class="card-link" @click="$emit('show-agent', agent.id)">Agent: {{ agent.first_name }} {{ agent.last_name }}</a>
           </h5>
         </div>
         <img
