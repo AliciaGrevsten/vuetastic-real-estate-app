@@ -16,6 +16,9 @@
         </ul>
       </div>
     </div>
+    <div v-if="!isSelected">
+      <h5>Click on an agents name to see more details.</h5>
+    </div>
   </div>
 </template>
 
@@ -34,6 +37,9 @@ export default {
   padding: 2%;
   margin: 1% 0%;
   box-sizing: border-box;
+}
+h1 {
+    text-shadow: 1px 1px rgb(140, 147, 155);
 }
 h3 {
   font-family: 'Quicksand', sans-serif; 
