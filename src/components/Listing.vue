@@ -49,7 +49,7 @@ export default {
   float: left;
   border-radius: 12px;
 }
-.img {
+img {
   display: block;
   width: 100%;
 }
