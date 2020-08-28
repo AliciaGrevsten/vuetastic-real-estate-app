@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Header msg="Vuetastic Real Estate"></Header>
+    <Header></Header>
 
     <div class="col profile">
       <AgentProfile v-bind:data="data"></AgentProfile>
@@ -44,6 +44,6 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: rgb(58, 82, 104);
 }
 </style>

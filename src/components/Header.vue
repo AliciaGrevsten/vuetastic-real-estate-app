@@ -1,6 +1,10 @@
 <template>
     <div class="header">
-    <h1>{{ msg }}</h1>
+        <img
+        src="../assets/images/Vuetastic-Real-Estate-Icon.png"
+          alt="Picture of listing"
+        />
+    <h1><strong>VUE</strong>tastic Real Estate</h1>
 
     </div>
 </template>
@@ -20,5 +24,12 @@ export default {
     color: white;
     margin: 0%;
     padding: 2%;
+}
+img {
+    height: 100px;
+    float: left;
+}
+h1 {
+    color: rgb(58, 82, 104);
 }
 </style>
