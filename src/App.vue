@@ -16,7 +16,7 @@
         <Listings v-bind:data="data" v-on:show-listing="showListing" v-on:show-agent="showAgent"></Listings>
       </div>
       <div class="col listing">
-        <Listing 
+        <Listing
           v-bind:listing="selectedListing"
           v-bind:agent="listingAgent"
           v-bind:isSelected="listingIsSelected"
@@ -81,18 +81,19 @@ export default {
   text-align: center;
   color: rgb(58, 82, 104);
   background-color: white;
-  background-image: url("https://cdn.hipwallpaper.com/i/36/24/WRSJnu.jpg");
 }
-
+.row {
+  background-color: rgba(245, 243, 243, 0.849);
+}
 .profile {
   width: 22%;
   margin: 1% 1%;
-  float:left;
+  float: left;
   color: rgb(77, 99, 119);
 }
 .listings {
   width: 46%;
-  float: left; 
+  float: left;
   margin-top: 1%;
   color: rgb(77, 99, 119);
   padding: 1%;
@@ -102,6 +103,7 @@ export default {
   width: 22%;
   color: rgb(77, 99, 119);
   margin: 1% 1%;
+  padding: 2%;
   text-align: left;
 }
 .row:after {
@@ -111,8 +113,6 @@ export default {
 }
 h1,
 h3 {
-  font-family: "Sacramento", cursive;
   color: rgb(58, 82, 104);
 }
-
 </style>

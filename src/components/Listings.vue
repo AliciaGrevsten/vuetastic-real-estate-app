@@ -97,10 +97,11 @@ export default {
   width: 40%;
 }
 h1 {
-    text-shadow: 1px 1px rgb(140, 147, 155);
+  text-shadow: 1px 1px rgb(140, 147, 155);
 }
 h5,
-h4, h3 {
+h4,
+h3 {
   color: rgb(16, 65, 110);
 }
 img {
