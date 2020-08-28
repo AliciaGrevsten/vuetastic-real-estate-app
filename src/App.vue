@@ -76,31 +76,34 @@ export default {
 <style>
 #app {
   font-family: "Quicksand", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: rgb(58, 82, 104);
-  background-color: white;
-  background-image: url("https://cdn.hipwallpaper.com/i/36/24/WRSJnu.jpg");
+  color: rgb(22, 52, 80);
+  margin: 0%;
+  padding: 0%;
+  background-color: rgb(255, 255, 255);
+  background-image: url("https://vistapointe.net/images/white-10.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: auto; 
 }
 
 .profile {
   width: 22%;
   margin: 1% 1%;
   float:left;
-  color: rgb(77, 99, 119);
+  color: rgb(22, 52, 80);
 }
 .listings {
   width: 46%;
   float: left; 
-  margin-top: 1%;
-  color: rgb(77, 99, 119);
+  color: rgb(22, 52, 80);
   padding: 1%;
 }
 .listing {
   float: left;
   width: 22%;
-  color: rgb(77, 99, 119);
+  color: rgb(22, 52, 80);
   margin: 1% 1%;
   text-align: left;
 }
@@ -111,8 +114,7 @@ export default {
 }
 h1,
 h3 {
-  font-family: "Sacramento", cursive;
-  color: rgb(58, 82, 104);
+  font-family: "Quicksand", sans-serif;
 }
 
 </style>

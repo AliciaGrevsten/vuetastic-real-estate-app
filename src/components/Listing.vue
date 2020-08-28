@@ -20,6 +20,9 @@
           </div>
         </div>
     </div>
+    <div v-if="!isSelected">
+      <h5>Click on "Read more.." on any of the listings to see more details.</h5>
+    </div>
   </div>
 </template>
 
@@ -41,5 +44,9 @@ export default {
 img {
   display: block;
   width: 100%;
+}
+h1 {
+    text-shadow: 1px 1px rgb(140, 147, 155);
+
 }
 </style>

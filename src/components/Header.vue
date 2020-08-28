@@ -1,6 +1,7 @@
 <template>
     <div class="header">
-    <h1>Vuetastic Real Estate</h1>
+        <img src="../assets/images/Vuetastic-Real-Estate-Icon.png">
+    <h1>VUEtastic Real Estate</h1>
     </div>
 </template>
 
@@ -15,11 +16,17 @@ export default {
 
 <style scoped>
 .header {
-    color: white;
     margin: 0%;
     padding: 1%;
+    border-bottom: 4px double rgb(22, 52, 80);
 }
 h1 {
     font-size: 50px;
+    color: rgb(22, 52, 80);
+    padding: 0%;
+    margin: 0%;
+}
+img {
+    height: 100px;
 }
 </style>
