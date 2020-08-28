@@ -5,12 +5,12 @@
     <div class="cardgroup" v-if="isSelected">
       <div class="card">
         <h3>{{agent.first_name}} {{agent.last_name}}</h3>
-        <img :src="require( `@/assets/images/${agent.profile_image}`)" alt="Profile image"/>
-       
+        <img :src="require( `@/assets/images/${agent.profile_image}`)" alt="Profile image" />
+
         <h4>Phone: {{agent.telephone}}</h4>
         <h4>Mail: {{agent.email}}</h4>
 
-        <h4>Listings: </h4>
+        <h4>Listings:</h4>
         <ul v-bind:key="listing.adress" v-for="listing in agent.listings">
           <li>{{listing.address}}</li>
         </ul>
@@ -26,7 +26,7 @@
 <script>
 export default {
   name: "AgentProfile",
- props: ["agent", "isSelected"]
+  props: ["agent", "isSelected"],
 };
 </script>
 
@@ -39,14 +39,15 @@ export default {
   box-sizing: border-box;
 }
 h1 {
-    text-shadow: 1px 1px rgb(140, 147, 155);
+  text-shadow: 1px 1px rgb(140, 147, 155);
 }
 h3 {
-  font-family: 'Quicksand', sans-serif; 
+  font-family: "Quicksand", sans-serif;
 }
-h4, p {
+h4,
+p {
   text-align: left;
-  color: rgb(58, 82, 104);;
+  color: rgb(58, 82, 104);
 }
 img {
   height: 200px;
