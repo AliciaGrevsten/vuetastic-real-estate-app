@@ -1,4 +1,4 @@
-# vuetastic-real-estate-app
+# vuetastic-real-estate-app Alicia, Josefin and Marina
 
 ## Project setup
 ```
