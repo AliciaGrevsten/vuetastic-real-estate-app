@@ -1,24 +1,27 @@
 <template>
-    <h1>More Information</h1>
-    <div class="cardgroup" v-if="isSelected">
-        <div class="card">
-          <div class="card-body">
-            <h4>Address: {{ listing.address }}</h4>
-            <h4>Description: {{ listing.description }}</h4>
-            <h4>Latitude: {{ listing.latitude }}</h4>
-            <h4>Longitude: {{ listing.longitude }}</h4>
+  <h1>More Information</h1>
+  <div class="cardgroup" v-if="isSelected">
+    <div class="card">
+      <div class="card-body">
+        <h4>Address: {{ listing.address }}</h4>
+        <h4>Description: {{ listing.description }}</h4>
+        <h4>Latitude: {{ listing.latitude }}</h4>
+        <h4>Longitude: {{ listing.longitude }}</h4>
 
-            <br />
-            <h4>Agent: {{agent.first_name}} {{agent.last_name}}</h4>
-            <h4>Phone: {{agent.telephone}}</h4>
-            <h4>Email: {{agent.email}}</h4>
+        <br />
+        <h4>Agent: {{agent.first_name}} {{agent.last_name}}</h4>
+        <h4>Phone: {{agent.telephone}}</h4>
+        <h4>Email: {{agent.email}}</h4>
 
-            <div class="img" v-bind:key="image.id" v-for="image in listing.images">
-              <img v-bind:src="image" />
-            </div> 
-          </div>
+        <div class="img" v-bind:key="image.id" v-for="image in listing.images">
+          <img v-bind:src="image" />
         </div>
+      </div>
     </div>
+  </div>
+  <div v-if="!isSelected">
+    <h5>Click on "Read more.." on any of the listings to see more details.</h5>
+  </div>
 </template>
 
 <script>
@@ -36,10 +39,12 @@ export default {
   box-sizing: border-box;
   margin: 1%;
 }
-img{
+img {
   height: 50%;
   width: 100%;
   display: block;
 }
-
+h1 {
+  text-shadow: 1px 1px rgb(140, 147, 155);
+}
 </style>
