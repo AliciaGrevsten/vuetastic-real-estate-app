@@ -7,8 +7,8 @@
           <img v-bind:src="listing.images[0]" alt="Picture of listing" />
         </div>
         <div class="card-body right">
-          <h4 class="card-header">{{ listing.address }}</h4>
-          <h5 class="card-title">
+          <h3 class="card-header">{{ listing.address }}</h3>
+          <h4 class="card-title">
             Agent:
             <a
               href="#"
@@ -16,7 +16,7 @@
               v-on:click="$emit('show-agent', agent.id)"
               class="card-link"
             >{{ agent.first_name }} {{ agent.last_name }}</a>
-          </h5>
+          </h4>
           <br />
           <a
             href="#"
@@ -96,20 +96,25 @@ export default {
 .right {
   width: 40%;
 }
+h1 {
+  text-shadow: 1px 1px rgb(140, 147, 155);
+}
 h5,
-h4 {
-  color: rgb(77, 99, 119);
+h4,
+h3 {
+  color: rgb(16, 65, 110);
 }
 img {
   height: 100%;
   width: 90%;
   display: block;
+  border-radius: 6px;
 }
 a {
   text-decoration: none;
-  color: rgb(58, 82, 104);
+  color: rgb(37, 85, 131);
 }
 a:hover {
-  color: rgb(31, 147, 255);
+  color: rgb(26, 139, 115);
 }
 </style>
