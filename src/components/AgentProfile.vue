@@ -8,7 +8,7 @@
 -->
 
 <template>
-  <div class="container" v-show="isSelected">
+  <div class="container" v-if="isClicked">
     <div class="cardgroup" v-bind:key="agent.id" v-for="agent in data">
       <div class="card">
         <h3>{{agent.first_name}} {{agent.last_name}}</h3>
@@ -33,8 +33,13 @@
 <script>
 export default {
   name: "Agent",
-  props: ["data"],
-  isSelected: false,
+ props: {
+   data: Array,
+    isClicked:{
+      type: Boolean
+    }
+    },
+
 };
 </script>
 

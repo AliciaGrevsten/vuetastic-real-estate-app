@@ -3,10 +3,10 @@
     <Header msg="Vuetastic Real Estate"></Header>
 
     <div class="col profile">
-      <AgentProfile v-bind:data="data"></AgentProfile>
+      <AgentProfile v-bind:data="data" v-bind:isClicked="isSelected"></AgentProfile>
     </div>
      <div class="col listings">
-      <Listings v-bind:data="data"></Listings>
+      <Listings v-bind:data="data" v-bind:isSelected="isSelected" v-on:show-agent="showAgent"></Listings>
     </div> 
     <div class="col listing">
       <Listing></Listing>
@@ -16,7 +16,7 @@
 
 <script>
 import Header from './components/Header.vue'
-//import AgentProfile from './components/AgentProfile.vue'
+import AgentProfile from './components/AgentProfile.vue'
 //import Listing from './components/Listing.vue'
 import Listings from './components/Listings.vue'
 import json from './assets/house_data.json'
@@ -26,15 +26,21 @@ export default {
   name: 'App',
   components: {
     Header, 
-    //AgentProfile,
+   AgentProfile,
     //Listing,
     Listings
   },
   data() {
     return {
       data: json,
+      isSelected: false,
     }
   },
+  methods:{
+    showAgent(){
+      this.isSelected = !this.isSelected;
+    }
+  }
 }
 </script>
 
