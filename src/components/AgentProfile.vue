@@ -1,7 +1,6 @@
 
 <template>
   <div class="container">
-    <h1>Agent Profile</h1>
     <div class="cardgroup" v-if="isSelected">
       <div class="card">
         <h3>{{agent.first_name}} {{agent.last_name}}</h3>
@@ -12,12 +11,12 @@
 
         <h4>Listings:</h4>
         <ul v-bind:key="listing.adress" v-for="listing in agent.listings">
-          <li>{{listing.address}}</li>
+          <li><a href="#">{{listing.address}}</a></li>
         </ul>
       </div>
     </div>
     <div v-if="!isSelected">
-      <h5>Click on an agents name to see more details.</h5>
+      <h4>Agent information will be displayed here. Click on an agents name to see more details.</h4>
     </div>
   </div>
 </template>
@@ -38,9 +37,6 @@ export default {
   margin: 1% 0%;
   box-sizing: border-box;
 }
-h1 {
-  text-shadow: 1px 1px rgb(140, 147, 155);
-}
 h3 {
   font-family: "Quicksand", sans-serif;
 }
@@ -50,10 +46,20 @@ p {
   color: rgb(58, 82, 104);
 }
 img {
-  height: 200px;
-  width: 80%;
+  height: 150px;
+  width: 60%;
   display: block;
   border-radius: 200px;
   margin: auto;
+}
+li {
+  text-align: left;
+}
+a {
+  text-decoration: none;
+  color: rgb(37, 85, 131);
+}
+a:hover {
+  color: rgb(4, 158, 86);
 }
 </style>
