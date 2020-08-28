@@ -5,9 +5,8 @@
     <div class="cardgroup" v-if="isSelected">
       <div class="card">
         <h3>{{agent.first_name}} {{agent.last_name}}</h3>
-
-        <img v-bind:src="agent.profile_image" alt="Profile image"/>
-        
+        <img :src="require( `@/assets/images/${agent.profile_image}`)" alt="Profile image"/>
+       
         <h4>Phone: {{agent.telephone}}</h4>
         <h4>Mail: {{agent.email}}</h4>
 
