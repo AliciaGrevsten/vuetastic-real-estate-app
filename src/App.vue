@@ -5,11 +5,11 @@
 
     <Header></Header>
 
-    <div class="col profile">
-      <AgentProfile v-bind:data="data"></AgentProfile>
+    <div class="col profile" v-if="isSelected" >
+      <AgentProfile v-bind:agent="agent"></AgentProfile>
     </div>
      <div class="col listings">
-      <Listings v-bind:data="data"></Listings>
+      <Listings v-bind:data="data" v-on:show-agent="showAgent"></Listings>
     </div> 
      <!-- <div class="col listing">
        <Listing v-bind:data="data"></Listing>
@@ -36,6 +36,18 @@ export default {
   data() {
     return {
       data: json,
+      isSelected: false,
+      agent: {}
+    }
+  }, 
+  methods: {
+    showAgent(agentId){
+      this.data.forEach(agent => {
+        if (agent.id == agentId) {
+          this.agent = agent;
+           this.isSelected = true; 
+        }
+      });
     }
   }
 }
@@ -53,6 +65,5 @@ export default {
 h1, h3 {
   font-family: 'Sacramento', cursive;
     color: rgb(58, 82, 104);
-
 }
 </style>

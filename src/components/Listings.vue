@@ -1,14 +1,13 @@
 <template>
 
   <div class="container">
-    <h1 class="title">Listings</h1>
     <div class="cardgroup" v-bind:key="agent.id" v-for="agent in displayedListings">
       <div class="card" v-bind:key="listing.address" v-for="listing in agent.listings">
         <h4 class="card-header">{{ listing.address }}</h4>
         <div class="card-body">
           <h5 class="card-title">
             Agent:
-            <a href="#" class="card-link">{{ agent.first_name }} {{ agent.last_name }}</a>
+            <a href="#" v-bind:key="agent.id" v-on:click="$emit('show-agent', agent.id)" class="card-link">{{ agent.first_name }} {{ agent.last_name }}</a>
           </h5>
         </div>
         <br />
