@@ -1,5 +1,4 @@
 <template>
-  <div class="container">
     <h1>More Information</h1>
     <div class="cardgroup" v-if="isSelected">
         <div class="card">
@@ -20,7 +19,6 @@
           </div>
         </div>
     </div>
-  </div>
 </template>
 
 <script>
@@ -38,8 +36,10 @@ export default {
   box-sizing: border-box;
   margin: 1%;
 }
-img {
-  display: block;
+img{
+  height: 50%;
   width: 100%;
+  display: block;
 }
+
 </style>
