@@ -9,7 +9,7 @@
       <Listings></Listings>
     </div>
     <div class="col listing">
-      <Listing></Listing>
+       <Listing v-bind:data="data"></Listing>
     </div>
   </div>
 </template>
