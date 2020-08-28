@@ -1,7 +1,6 @@
 <template>
     <div class="header">
-    <h1>{{ msg }}</h1>
-
+    <h1>Vuetastic Real Estate</h1>
     </div>
 </template>
 
@@ -19,6 +18,9 @@ export default {
     background-color: rgb(133, 197, 199);
     color: white;
     margin: 0%;
-    padding: 2%;
+    padding: 1%;
+}
+h1 {
+    font-size: 50px;
 }
 </style>
