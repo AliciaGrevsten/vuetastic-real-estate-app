@@ -83,11 +83,11 @@ export default {
   background-color: white;
 }
 .row {
-  background-color: rgba(245, 243, 243, 0.849);
+  background-color: rgba(241, 241, 241, 0.897);
 }
 .profile {
   width: 22%;
-  margin: 1% 1%;
+  margin: 2% 1%;
   float: left;
   color: rgb(77, 99, 119);
 }
